@@ -25,7 +25,7 @@ This project is a **Next.js-based authentication system** that includes **email/
 
 1. **Clone the Repository**  
    ```bash
-   git clone [https://github.com/your-repo/nextjs-auth-system.git](https://github.com/pankshiks/next-firebase-auth-app)
+   git clone https://github.com/pankshiks/next-firebase-auth-app
    cd next-firebase-auth-app
    ```
 
