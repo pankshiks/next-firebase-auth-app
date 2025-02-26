@@ -78,9 +78,3 @@ This project is a **Next.js-based authentication system** that includes **email/
 ### **Protected Routes**  
 - Pages like **Dashboard** are **only accessible to authenticated users**.  
 - Unauthenticated users are redirected to the **Login page**.  
-
-## **Screenshots**  
-
-| Registration Page | Login Page | Dashboard |
-|------------------|-----------|-----------|
-| ![Register](https://prnt.sc/3_BtbQwh-hXt) | ![Login](https://prnt.sc/ANCq40TW9gwb) | ![Dashboard](https://prnt.sc/PsSGI-jZSBA8) |
