@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Next.js Authentication System**  
 
-## Getting Started
+## **Overview**  
+This project is a **Next.js-based authentication system** that includes **email/password registration, Google authentication, and Firebase integration**. It features a modern UI with **Tailwind CSS**, user input validation, error handling, and API protection using Firebase Authentication.  
 
-First, run the development server:
+## **Features**  
+✔️ User Registration (Email/Password)  
+✔️ Google Authentication (OAuth)  
+✔️ Firebase Authentication Integration  
+✔️ Secure Token-Based API Access  
+✔️ Input Validation & Error Handling  
+✔️ Full-Page & Button Loaders  
+✔️ Next.js Client Components  
+✔️ Disallowed Email Domains Protection  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Tech Stack**  
+- **Framework**: [Next.js](https://nextjs.org/)  
+- **Authentication**: [Firebase Authentication](https://firebase.google.com/)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **State Management**: React Hooks (`useState`, `useEffect`)  
+- **Routing**: Next.js App Router  
+- **Database (Optional)**: Firebase Firestore  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Installation**  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/your-repo/nextjs-auth-system.git
+   cd nextjs-auth-system
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install Dependencies**  
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## Learn More
+3. **Configure Firebase**  
+   - Create a **Firebase project** on [Firebase Console](https://console.firebase.google.com/).  
+   - Enable **Email/Password Authentication** and **Google Authentication**.  
+   - Get your Firebase config and add it to `.env.local`:  
 
-To learn more about Next.js, take a look at the following resources:
+     ```plaintext
+     NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+     NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+     NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+     NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+     NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+     NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+     ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Run the Development Server**  
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+## **Usage**  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Register a New User**  
+- Users can **sign up** using **email/password**.  
+- The system prevents signups with **temporary email domains** like `mailinator.com`, `yopmail.com`, etc.  
+- Password validation ensures strong credentials.  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **Login & Authentication**  
+- Users can log in via **email/password** or **Google OAuth**.  
+- The authentication state is managed using **Firebase Authentication**.  
+- Upon login, users are redirected to the **Dashboard**.  
+
+### **API Authentication**  
+- Firebase tokens are attached to API requests to authenticate users.  
+- Invalid or expired tokens return an authentication error.  
+
+### **Protected Routes**  
+- Pages like **Dashboard** are **only accessible to authenticated users**.  
+- Unauthenticated users are redirected to the **Login page**.  
+
+## **Screenshots**  
+
+| Registration Page | Login Page | Dashboard |
+|------------------|-----------|-----------|
+| ![Register](https://prnt.sc/3_BtbQwh-hXt) | ![Login](https://prnt.sc/ANCq40TW9gwb) | ![Dashboard](https://prnt.sc/PsSGI-jZSBA8) |
